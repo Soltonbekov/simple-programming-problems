@@ -18,7 +18,7 @@ class CesarCipher(object):
                 encoded_text += plainText[j]
             else:
                 if self._alphabet.find(plainText[j])+self._shift > len(self._alphabet)-1:
-                    encoded_text += self._alphabet[(self._alphabet.find(plainText[j])+self._shift) - (len(self._alphabet)-1)]
+                    encoded_text += self._alphabet[(self._alphabet.find(plainText[j])+self._shift) - (len(self._alphabet))]
                 else:
                     encoded_text += self._alphabet[self._alphabet.find(plainText[j])+self._shift]
             j += 1
